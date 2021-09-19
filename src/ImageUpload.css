@@ -1,0 +1,23 @@
+.uploadModal{
+	display: flex;
+	flex-direction: column;
+    padding:5px;
+    justify-content: space-between;
+    align-content: space-between;
+}
+
+.userContainer{
+	position: relative;
+	display: flex;
+	justify-content: center;
+	padding: 5px;
+}
+
+.userContainer > p{
+	font-size: 25px;
+}
+
+.upload{
+	border-radius: 30px;
+	margin-left: 2px;
+}
