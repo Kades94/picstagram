@@ -5,17 +5,18 @@
 	border:2px solid lightgray;
 	background-color: lavender;
 	flex-wrap: wrap;
+	border-radius: 10px;
 }
 
-.image:hover{
-	transform: scale(1.02);
-}
-
-img{
+.imageBody img{
   width:100%;
   height: 300px;
 }
 
+a, a:hover{
+	color: black;
+	text-decoration: none;
+}
 
 .imageHeader{
     display: flex;
@@ -28,18 +29,84 @@ img{
 	margin: 2px;
 }
 
-.imageBody{
+.imageBody:hover{
+	cursor: pointer;
+	opacity: .5;
 }
 
 
 .imageFooter{
 	padding-left: 5px;
 	border-top: 1px solid lightgray;
+	word-break: break-all;
 }
 
-.like{
+.count{
 	color:red;
-	animation: beat ease-in-out;
+}
+
+.count:active{
+	animation: beat ease-in-out .2s;
+}
+
+.count:hover{
+	cursor: pointer;
+}
+
+.lightbox{
+	display: flex;
+	color: black;
+	height: 400px;
+}
+
+.lightboxImage{
+	width: 50%;
+	position: relative;
+}
+
+.lightboxImage img{
+	display: block;
+	height: 100%;	
+	width: 100%;
+}
+
+.lightboxComments{
+	border-left: 1px solid lightgray;
+	background-color: whitesmoke;
+	color: black;
+	flex: 2;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	 word-break: break-all;
+}
+
+
+.text{
+	height: 50px;
+	background-color: black;
+	border: 1px solid black;
+}
+
+.lightboxComments input[type="text"]{
+  border: none;
+  outline: none;
+  background: transparent;
+  width: 80%;
+}
+
+form button{
+	float: right;
+	border: none;
+	outline: none;
+	background-color: transparent;
+	color: blue;
+}
+
+form{
+	border: 1px solid lightgrey;
+	width: 100%;
+	height: 100%;
 }
 
 @keyframes beat{

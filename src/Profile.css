@@ -1,0 +1,60 @@
+.profileHeader{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 250px;
+	border-bottom: 1px solid lightgrey;
+}
+
+.info{
+	display: flex;
+	font-size: 18px;
+}
+
+.info > div{
+	padding-right: 10px;	
+}
+
+.profile{
+	border:1px solid black ;
+}
+
+.summary{
+	margin-left: 15px;
+	padding: 5px;
+	font-size: 16px;
+}
+
+
+.profileContainer{
+	background-color: lavender;
+	padding: 5px;
+	height: 100vh;
+	box-sizing: border-box;
+	max-width: 100vw;
+	overflow: scroll;
+}
+
+.profileBody{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-column-gap: 6px;
+  grid-row-gap:20px;
+  margin: 5px;
+}
+
+.panel{
+	display: flex;
+	justify-content:space-around;
+	padding: 10px;
+}
+
+.panel1, .panel2, .panel3{
+	cursor: pointer;
+	color: grey;
+}
+
+.active{
+	color: black;
+	font-weight: bold;
+}

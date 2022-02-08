@@ -9,9 +9,34 @@
   overflow: scroll;
 }
 
-.signUpModal, .loginModal{
-	display: flex;
-	flex-direction: column;
+.form form{
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.icon{
+  font-size: 35px;
+  margin-bottom: 10px;
+  text-align: center;
+  align-self: center;
+  padding: 5px;
+}
+
+.form{  
+  border: 2px solid lightgrey;
+  height: 300px;
+}
+
+.form input[type="text"]{
+  margin-bottom: 10px;
+  padding: 10px;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid grey;
+  outline: none;
+  background: transparent;
 }
 
 .imageContainer{
@@ -23,12 +48,11 @@
 }
 
 .noUser{
-  margin: 5px;
   display: flex;
   justify-content: center;
   align-content: center;
   align-items: center;
-  height: 80vh;
+  height: 100vh;
   backdrop-filter: blur(10px);
   background-color: rgba(255, 255, 255, 0.5); 
 }

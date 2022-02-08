@@ -7,22 +7,25 @@
   display:flex;
   height:8vh;
   align-items:center;
-  justify-content: center;
+  justify-content: space-between;
   z-index: 1000;
-  box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
+  box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.75);
   flex-wrap: wrap;
+  padding: 5px;
 }
 
 .title{
-  flex:1;
   font-family:Satisfy;
   font-size:2rem;
   color:white;
 }
 
+.title a,.title a:hover{
+  text-decoration: none;
+  color: white;
+}
 
 .buttonContainer{
-  flex:1 1 0;
   max-width: 100%
 }
 
@@ -38,13 +41,13 @@
 
 .login{
   float: right;
+  margin-right: 2px;
   border-radius: 30px;
 }
 
 .nav > div{
   margin: 5px;
 }
-
 
 @media only screen and (max-width: 330px) {
   .title{
@@ -56,3 +59,9 @@
   }
 }
 
+@media only screen and (max-width: 660px)
+{
+    input[type="search"]{
+    display: none;
+  }
+}
