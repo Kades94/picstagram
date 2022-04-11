@@ -32,6 +32,7 @@
 .signOut{
   border-radius: 30px;
   float: right;
+  margin-left: 3px;
 }
 
 .signUp{

@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
 import { Button, Modal } from 'react-bootstrap';
 import {db, storage} from './firebase';
-import Avatar from 'react-avatar';
 import './ImageUpload.css';
 import {Link} from "react-router-dom";
-
+import { BsPlusCircle } from "react-icons/bs";
 
 class ImageUpload extends Component{
     state={
@@ -36,6 +35,7 @@ class ImageUpload extends Component{
         const image = this.state.image;
         const caption = this.state.caption;
         const username = this.props.username;
+        const user =this.props.user;
     if(image && caption && username){ 
         const uploadTask = storage.ref(`images/${image.name}`).put(image);
         uploadTask.on(
@@ -56,7 +56,8 @@ class ImageUpload extends Component{
                             imageUrl: url,
                             username: username,
                             imagename: image.name,
-                            timestamp:Date().toLocaleString()
+                            timestamp:Date().toLocaleString(),
+                            uid:user.uid
                         });
 
                     })
@@ -83,8 +84,7 @@ class ImageUpload extends Component{
 
             <div className="userContainer">
             	{this.props.user ? (<div>
-                    <Link to={`/${this.props.username}`}><Avatar className="avatar" name={this.props.username} textSizeRatio='3' size="40" round={true}/></Link>
-                    <Button className="upload" variant="outline-dark" onClick={this.showUpload}>Upload Image</Button></div>)
+                    <span className={this.props.guest ? "guest" : "upload"} ><BsPlusCircle style={{fontSize:'30px'}} onClick={this.showUpload}/></span></div>)
             		: (<p>Please Sign In</p>)
             	}
             </div>

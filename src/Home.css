@@ -1,3 +1,4 @@
+
 .container{
 	box-sizing: border-box;
 	height:100vh;
@@ -49,15 +50,18 @@
 
 .noUser{
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-content: center;
   align-items: center;
   height: 100vh;
   backdrop-filter: blur(10px);
   background-color: rgba(255, 255, 255, 0.5); 
-}
-
-.noUser > h4{
   font-family: sans-serif;
   line-height: 1.5;
+  font-size: 28px;
+}
+
+.guestSignIn:hover{
+  cursor: pointer;
 }

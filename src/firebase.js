@@ -15,16 +15,3 @@ const auth = firebaseConfig.auth();
 const storage = firebaseConfig.storage();
 
 export {db, auth, storage};
-/*
-
-auth.onAuthStateChanged(function(user)){
-	if(user){
-		//is signed in
-		setUser(user)
-		name = user.displayName
-	} else{
-		//no user is signed in
-		setUser(null)
-	}
-}
-*/
