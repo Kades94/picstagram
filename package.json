@@ -2,13 +2,13 @@
   "name": "picstagram",
   "version": "0.1.0",
   "private": true,
-  "homepage":"https://kades94.github.io/picstagram",
   "dependencies": {
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
     "bootstrap": "^5.0.2",
     "firebase": "^8.8.1",
+    "netlify-cli": "^9.16.6",
     "react": "^17.0.2",
     "react-avatar": "^3.10.0",
     "react-bootstrap": "^2.0.0-beta.4",
@@ -20,8 +20,6 @@
     "web-vitals": "^1.1.2"
   },
   "scripts": {
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
